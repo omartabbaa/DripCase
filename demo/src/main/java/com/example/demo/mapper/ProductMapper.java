@@ -5,10 +5,10 @@ import com.example.demo.dto.output.ProductOutputDTO;
 import com.example.demo.entity.Product;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Component;
 
-@Mapper(componentModel = "spring")
+@Component
 public interface ProductMapper {
-    ProductMapper INSTANCE = Mappers.getMapper(ProductMapper.class);
 
     ProductOutputDTO toDTO(Product product);
     Product toEntity(ProductInputDTO productDTO);
