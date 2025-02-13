@@ -30,6 +30,8 @@ public class Gebruiker {
         this.role = role;
     }
 
+
+
     public Role getRole() {
         return role;
     }

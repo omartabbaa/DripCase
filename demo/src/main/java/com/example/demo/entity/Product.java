@@ -17,6 +17,13 @@ public class Product {
     private String type;
     private String off;
 
+    @ManyToMany
+    @JoinTable(
+            name = "product_categorieen",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "categorieen_id")
+    )
+
     public String getOff() {
         return off;
     }

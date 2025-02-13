@@ -7,9 +7,11 @@ import jakarta.persistence.*;
 public class Winkelwagen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private int id;
     private int totalprice;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
     private Product product;
 
     public Product getProduct() {

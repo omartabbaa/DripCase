@@ -19,6 +19,11 @@ public class Admin {
     private String password;
     private Role role;
 
+
+    @OneToOne
+    @JoinColumn(name = "winkel_id")
+    private Winkel winkel;
+
     public Role getRole() {
         return role;
     }

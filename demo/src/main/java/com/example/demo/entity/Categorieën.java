@@ -2,6 +2,8 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "categorieen")
 public class Categorieën {
@@ -12,6 +14,8 @@ public class Categorieën {
     private  String naam;
     private  String description;
     private  String image;
+    @ManyToMany(mappedBy = "categorieen")
+    private Set<Product> producten;
 
     public String getImage() {
         return image;
